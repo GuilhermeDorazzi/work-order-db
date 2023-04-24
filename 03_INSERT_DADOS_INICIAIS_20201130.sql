@@ -4,8 +4,8 @@
 INSERT INTO 
 TB_TIPOS_PAGINAS 
 (COD_TIPO, CLASSE_CSS_ICON, DESCRICAO) VALUES 
-(100, ' fa-users-cog ', 'Controle de Acesso'),
-(200, ' fa-cogs ', 'Cadastros');
+(100,' fa-users-cog ','Acess Controll'),
+(200,' fa-cogs ','Orders');
 --
 -- CADASTRADA OS TIPOS DE ACESSO AS PAGINAS
 --
@@ -20,10 +20,10 @@ TB_TIPOS_ACESSOS
 -- CADASTRA AS TELAS BASICAS DO CONTROLE DE ACESSO
 --
 INSERT INTO TB_PAGINAS (COD_PAGINA, NOME_PAGINA, NOME_CONTROLADOR, FLG_ATIVO, COD_TIPO, FLG_TIPO_PAGINA) VALUES 
-(1000,'Páginas','AC_Paginas','S',100,'M'),
-(1001,'Usuários','AC_Usuarios','S',100,'C'),
-(1002,'Usuários X Páginas','AC_UsuariosPaginas','S',100,'C'),
-(1003,'Empresas','AC_Empresas','S',100,'M');
+(1000,'Pages','AC_Paginas','S',100,'M'),
+(1001,'Users','AC_Usuarios','S',100,'C'),
+(1002,'User X Pages','AC_UsuariosPaginas','S',100,'C'),
+(1003,'Company','AC_Empresas','S',100,'M');
 --
 -- CADASTRA O USUÁRIO INICIAL
 --
