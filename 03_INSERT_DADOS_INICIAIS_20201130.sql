@@ -5,7 +5,9 @@ INSERT INTO
 TB_TIPOS_PAGINAS 
 (COD_TIPO, CLASSE_CSS_ICON, DESCRICAO) VALUES 
 (100,' fa-users-cog ','Acess Controll'),
-(200,' fa-cogs ','Orders');
+(200,' fa-cogs ','Orders'),
+(300,' fa-chart-line ','Reports'),
+(400,'fa-id-card','Records');
 --
 -- CADASTRADA OS TIPOS DE ACESSO AS PAGINAS
 --
@@ -19,11 +21,20 @@ TB_TIPOS_ACESSOS
 -- 
 -- CADASTRA AS TELAS BASICAS DO CONTROLE DE ACESSO
 --
-INSERT INTO TB_PAGINAS (COD_PAGINA, NOME_PAGINA, NOME_CONTROLADOR, FLG_ATIVO, COD_TIPO, FLG_TIPO_PAGINA) VALUES 
-(1000,'Pages','AC_Paginas','S',100,'M'),
-(1001,'Users','AC_Usuarios','S',100,'C'),
-(1002,'User X Pages','AC_UsuariosPaginas','S',100,'C'),
-(1003,'Company','AC_Empresas','S',100,'M');
+-- '100', ' fa-users-cog ', 'Acess Controll'
+INSERT INTO `tb_paginas` (`COD_PAGINA`,`NOME_PAGINA`,`NOME_CONTROLADOR`,`FLG_ATIVO`,`COD_TIPO`,`FLG_TIPO_PAGINA`) VALUES (1000,'Pages','AC_Paginas','S',100,'M');
+INSERT INTO `tb_paginas` (`COD_PAGINA`,`NOME_PAGINA`,`NOME_CONTROLADOR`,`FLG_ATIVO`,`COD_TIPO`,`FLG_TIPO_PAGINA`) VALUES (1002,'User X Page','AC_UsuariosPaginas','S',100,'C');
+-- '200', ' fa-cogs ', 'Orders'
+INSERT INTO `tb_paginas` (`COD_PAGINA`,`NOME_PAGINA`,`NOME_CONTROLADOR`,`FLG_ATIVO`,`COD_TIPO`,`FLG_TIPO_PAGINA`) VALUES (2001,'Orders Fake','CD_OrdemBK','S',200,'C');
+INSERT INTO `tb_paginas` (`COD_PAGINA`,`NOME_PAGINA`,`NOME_CONTROLADOR`,`FLG_ATIVO`,`COD_TIPO`,`FLG_TIPO_PAGINA`) VALUES (2002,'Orders','CD_Ordem','S',200,'C');
+-- '300', ' fa-chart-line ', 'Reports'
+INSERT INTO `tb_paginas` (`COD_PAGINA`,`NOME_PAGINA`,`NOME_CONTROLADOR`,`FLG_ATIVO`,`COD_TIPO`,`FLG_TIPO_PAGINA`) VALUES (3000,'Reports','RE_Relatorios','S',300,'C');
+-- '400', 'fa-id-card', 'Records'
+INSERT INTO `tb_paginas` (`COD_PAGINA`,`NOME_PAGINA`,`NOME_CONTROLADOR`,`FLG_ATIVO`,`COD_TIPO`,`FLG_TIPO_PAGINA`) VALUES (1003,'Company','AC_Empresas','S',400,'M');
+INSERT INTO `tb_paginas` (`COD_PAGINA`,`NOME_PAGINA`,`NOME_CONTROLADOR`,`FLG_ATIVO`,`COD_TIPO`,`FLG_TIPO_PAGINA`) VALUES (1004,'Users','AC_Usuarios','S',400,'C');
+INSERT INTO `tb_paginas` (`COD_PAGINA`,`NOME_PAGINA`,`NOME_CONTROLADOR`,`FLG_ATIVO`,`COD_TIPO`,`FLG_TIPO_PAGINA`) VALUES (4001,'Citys','CD_Cidade','S',400,'C');
+INSERT INTO `tb_paginas` (`COD_PAGINA`,`NOME_PAGINA`,`NOME_CONTROLADOR`,`FLG_ATIVO`,`COD_TIPO`,`FLG_TIPO_PAGINA`) VALUES (4002,'Jobs','CD_Job','S',400,'C');
+
 --
 -- CADASTRA O USUÁRIO INICIAL
 --
