@@ -4,7 +4,7 @@
 INSERT INTO 
 TB_TIPOS_PAGINAS 
 (COD_TIPO, CLASSE_CSS_ICON, DESCRICAO) VALUES 
-(100,' fa-users-cog ','Acess Controll'),
+(100,' fa-users-cog ','Access Control'),
 (200,' fa-cogs ','Orders'),
 (300,' fa-chart-line ','Reports'),
 (400,'fa-id-card','Records');
@@ -32,7 +32,7 @@ INSERT INTO `tb_paginas` (`COD_PAGINA`,`NOME_PAGINA`,`NOME_CONTROLADOR`,`FLG_ATI
 -- '400', 'fa-id-card', 'Records'
 INSERT INTO `tb_paginas` (`COD_PAGINA`,`NOME_PAGINA`,`NOME_CONTROLADOR`,`FLG_ATIVO`,`COD_TIPO`,`FLG_TIPO_PAGINA`) VALUES (1003,'Company','AC_Empresas','S',400,'M');
 INSERT INTO `tb_paginas` (`COD_PAGINA`,`NOME_PAGINA`,`NOME_CONTROLADOR`,`FLG_ATIVO`,`COD_TIPO`,`FLG_TIPO_PAGINA`) VALUES (1004,'Users','AC_Usuarios','S',400,'C');
-INSERT INTO `tb_paginas` (`COD_PAGINA`,`NOME_PAGINA`,`NOME_CONTROLADOR`,`FLG_ATIVO`,`COD_TIPO`,`FLG_TIPO_PAGINA`) VALUES (4001,'Citys','CD_Cidade','S',400,'C');
+INSERT INTO `tb_paginas` (`COD_PAGINA`,`NOME_PAGINA`,`NOME_CONTROLADOR`,`FLG_ATIVO`,`COD_TIPO`,`FLG_TIPO_PAGINA`) VALUES (4001,'Cities','CD_Cidade','S',400,'C');
 INSERT INTO `tb_paginas` (`COD_PAGINA`,`NOME_PAGINA`,`NOME_CONTROLADOR`,`FLG_ATIVO`,`COD_TIPO`,`FLG_TIPO_PAGINA`) VALUES (4002,'Jobs','CD_Job','S',400,'C');
 
 --
