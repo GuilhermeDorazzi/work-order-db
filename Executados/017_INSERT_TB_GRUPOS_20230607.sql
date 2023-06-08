@@ -1,0 +1,3 @@
+--
+INSERT INTO TB_GRUPO (GRUTECH, NIVEL_ACESSO) VALUES ('Aux.Admin', '90');
+--
