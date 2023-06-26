@@ -1,0 +1,4 @@
+-- 
+INSERT INTO tb_paginas (COD_PAGINA, NOME_PAGINA, NOME_CONTROLADOR, FLG_ATIVO, COD_TIPO, FLG_TIPO_PAGINA, NIVEL_ACESSO) 
+VALUES ('1007', 'Reason Reschedule', 'CD_Motivo', 'S', '400', 'C', '90');
+--
