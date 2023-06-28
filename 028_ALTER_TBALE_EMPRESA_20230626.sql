@@ -1,0 +1,3 @@
+--
+ALTER TABLE TB_EMPRESA ADD COLUMN URL_LOGO VARCHAR(500) NULL COMMENT 'Armazena a url da imagem da empresa';
+--
