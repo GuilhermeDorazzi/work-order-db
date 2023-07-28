@@ -1,0 +1,4 @@
+--
+INSERT INTO tb_paginas (COD_PAGINA, NOME_PAGINA, NOME_CONTROLADOR, FLG_ATIVO, COD_TIPO, FLG_TIPO_PAGINA, NIVEL_ACESSO) 
+VALUES ('1008', 'Fild Manager X Tech', 'CD_FildManager', 'S', '100', 'M', '98');
+--
