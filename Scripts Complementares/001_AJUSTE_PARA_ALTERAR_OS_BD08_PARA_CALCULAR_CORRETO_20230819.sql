@@ -5,9 +5,9 @@
 create table tb_ordem_bk_bd08
 select id_ordem, cod_empresa, cod_filial, data_baixa from tb_ordem 
         where cod_empresa = 3 
-		  and cod_filial in (3,4)
-          and date(DATA_BAIXA) > '2023-07-24'
-          and ID_ORDEM in (select distinct id_ordem from tb_jobs_ordem where COD_EMPRESA = 3 and COD_JOB in (198,199) and qtd2 is null) 
+		  and cod_filial in (4)
+          and date(DATA_BAIXA) > '2023-07-31'
+          and ID_ORDEM in (select distinct id_ordem from tb_jobs_ordem where COD_EMPRESA = 3 and COD_JOB in (198,199)) 
           and STATUS = 'Finished';
 --
 -- Vamos fazer o processo de alterar os status das ordens
@@ -15,8 +15,8 @@ select id_ordem, cod_empresa, cod_filial, data_baixa from tb_ordem
 SET SQL_SAFE_UPDATES = 0;
 update tb_ordem 
 set STATUS = 'Pending'
-where cod_filial in (3,4)
-  and date(DATA_BAIXA) > '2023-07-24'
+where cod_filial in (4)
+  and date(DATA_BAIXA) > '2023-07-31'
   and id_ordem in (select distinct id_ordem from tb_ordem_bk_bd08 where COD_EMPRESA = 3);
 SET SQL_SAFE_UPDATES = 1;
 --

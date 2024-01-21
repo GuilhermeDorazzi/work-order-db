@@ -4,6 +4,9 @@ INSERT INTO tb_paginas (COD_PAGINA, NOME_PAGINA, NOME_CONTROLADOR, FLG_ATIVO, CO
 VALUES ('3021', 'General Market Report', 'CD_GeneralMarketReport', 'S', '300', 'C', '98');
 --
 INSERT INTO tb_paginas (COD_PAGINA, NOME_PAGINA, NOME_CONTROLADOR, FLG_ATIVO, COD_TIPO, FLG_TIPO_PAGINA, NIVEL_ACESSO) 
+VALUES ('3022', 'Field Director Analitico', 'CD_FieldDirectorReportAnalitico', 'S', '300', 'C', '98');
+--
+INSERT INTO tb_paginas (COD_PAGINA, NOME_PAGINA, NOME_CONTROLADOR, FLG_ATIVO, COD_TIPO, FLG_TIPO_PAGINA, NIVEL_ACESSO) 
 VALUES ('4007', 'Salary', 'CD_Salary', 'S', '400', 'C', '98');
 --
 INSERT INTO tb_grupo (GRUTECH, NIVEL_ACESSO) 
