@@ -1,6 +1,4 @@
 --
-ALTER TABLE tb_usuarios ADD COLUMN `COD_FIELD_DIRECTOR` int(11) DEFAULT NULL COMMENT 'Coluna que identifica quem eh o subordinado do field director.';
---
 -- ESSA TABELA VAI REALIZAR O PROCESSO DE TODAS AS AMARRACOES DOS USUARIOS E SEUS SUBORDINADOS. 
 --
 CREATE TABLE tb_usuarios_subordinados(
