@@ -21,4 +21,7 @@ CREATE TABLE tb_usuarios_subordinados(
 --
 INSERT INTO `tb_paginas` (`COD_PAGINA`, `NOME_PAGINA`, `NOME_CONTROLADOR`, `FLG_ATIVO`, `COD_TIPO`, `FLG_TIPO_PAGINA`, `NIVEL_ACESSO`) 
 VALUES ('4008', 'Users X Groups', 'CD_GroupUsers', 'S', '400', 'C', '98');
-
+--
+INSERT INTO `tb_paginas` (`COD_PAGINA`, `NOME_PAGINA`, `NOME_CONTROLADOR`, `FLG_ATIVO`, `COD_TIPO`, `FLG_TIPO_PAGINA`, `NIVEL_ACESSO`) 
+VALUES ('3023', 'Tech Report Salary', 'CD_ReportsTechSalaryReport', 'S', '300', 'C', '98');
+--
