@@ -33,6 +33,9 @@ CREATE TABLE TB_VALORES_RETIDOS_LANCAMENTOS(
   CONSTRAINT FK_TB_VALORES_LANCAMENTOS_03 FOREIGN KEY (`COD_EMPRESA`, `COD_FILIAL`) REFERENCES `tb_filial` (`COD_EMPRESA`, `COD_FILIAL`)
 );
 --
+INSERT INTO `tb_paginas` (`COD_PAGINA`, `NOME_PAGINA`, `NOME_CONTROLADOR`, `FLG_ATIVO`, `COD_TIPO`, `FLG_TIPO_PAGINA`, `NIVEL_ACESSO`) VALUES ('3036', 'Security Deposit Tech', 'CD_SecurityDepositTech', 'S', '300', 'C', '1');
+INSERT INTO `tb_paginas` (`COD_PAGINA`, `NOME_PAGINA`, `NOME_CONTROLADOR`, `FLG_ATIVO`, `COD_TIPO`, `FLG_TIPO_PAGINA`, `NIVEL_ACESSO`) VALUES ('3037', 'Security Deposit Report', 'CD_SecurityDepositReport', 'S', '300', 'C', '98');
+--
 --
 DELIMITER //
 --
@@ -200,7 +203,7 @@ BEGIN
               VALUES (V_COD_EMPRESA,V_COD_USUARIO,V_COD_FILIAL,V_ID_ORDEM,'Debit','Security Deposit',V_VALOR_COTA);
         -- ATENCAO, AS DEMAIS TABELAS SERAM EXECUTADAS VIA TRIGGER.
         INSERT INTO TB_DIVIDA (`COD_EMPRESA`, `COD_USUARIO`, `TITULO`, `DESCRICAO`, `TIPO_DIVIDA`, `INFO_TIPO_DIVIDA`, `DATA_VENCIMENTO`, `VALOR_DIVIDA`, `VALOR_PARCELA`, `FLG_ATIVO`, `FLG_LIQUIDADO`, `DATA_BAIXA`, `COD_USUARIO_BAIXA`, `TIPO`, `COD_FILIAL`) 
-             VALUES (V_COD_EMPRESA, V_COD_USUARIO, 'Security Deposit', 'Security Deposit', 'One Time', '', current_date(), V_VALOR_COTA, V_VALOR_COTA, 'S', 'S', current_timestamp(), null, 'B', V_COD_FILIAL);
+             VALUES (V_COD_EMPRESA, V_COD_USUARIO, 'Security Deposit', 'Security Deposit', 'One Time', '', current_date(), V_VALOR_COTA, V_VALOR_COTA, 'S', 'S', current_timestamp(), null, 'E', V_COD_FILIAL);
         --
     END IF;
     --
