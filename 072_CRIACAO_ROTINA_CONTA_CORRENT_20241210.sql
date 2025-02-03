@@ -35,6 +35,7 @@ CREATE TABLE TB_VALORES_RETIDOS_LANCAMENTOS(
 --
 INSERT INTO `tb_paginas` (`COD_PAGINA`, `NOME_PAGINA`, `NOME_CONTROLADOR`, `FLG_ATIVO`, `COD_TIPO`, `FLG_TIPO_PAGINA`, `NIVEL_ACESSO`) VALUES ('3036', 'Security Deposit Tech', 'CD_SecurityDepositTech', 'S', '300', 'C', '1');
 INSERT INTO `tb_paginas` (`COD_PAGINA`, `NOME_PAGINA`, `NOME_CONTROLADOR`, `FLG_ATIVO`, `COD_TIPO`, `FLG_TIPO_PAGINA`, `NIVEL_ACESSO`) VALUES ('3037', 'Security Deposit Report', 'CD_SecurityDepositReport', 'S', '300', 'C', '98');
+UPDATE `tb_paginas` SET `NOME_PAGINA` = 'Field Director Analitico' WHERE (`COD_PAGINA` = '3022');
 --
 --
 DELIMITER //
@@ -218,7 +219,7 @@ CREATE TRIGGER DEPOIS_ATUALIZAR_ORDEM
 AFTER UPDATE
 ON TB_ORDEM FOR EACH ROW
 BEGIN
-    IF NEW.STATUS = 'Finished' THEN  
+    IF NEW.STATUS = 'Finished' AND OLD.STATUS != 'Finished' THEN  
         CALL sp_gerar_desconto_automatico_tech(NEW.ID_ORDEM, NEW.COD_EMPRESA, NEW.COD_FILIAL, NEW.COD_USUARIO);
     END IF;
 END //
